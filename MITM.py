@@ -30,7 +30,7 @@ def main():
     mac_addr2 = get_mac_addr(ip_addr2)
 
     if not mac_addr1 or not mac_addr2:
-        sys.stderr.write('[!] Unable to retrieve MAC Address of %s\n[*] Exiting...' % ip_addr1 if not mac_addr1 else ip_addr2)
+        sys.stderr.write('[!] Unable to retrieve MAC Address of %s\n[*] Exiting...' % (ip_addr1 if not mac_addr1 else ip_addr2))
         exit(-1)
 
     print('[*] MAC Address of First IP: %s' % mac_addr1)
